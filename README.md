@@ -9,4 +9,5 @@
 # Installation
 * git clone zuri-project
 * pip install -r requirements.txt
-
+* python manage.py createsuperuser
+* python manage.py runserver
