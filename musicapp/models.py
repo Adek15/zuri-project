@@ -17,8 +17,11 @@ class Song(models.Model):
     genre = models.CharField(max_length=50)
     artist_id = models.ForeignKey(Artist, on_delete=models.CASCADE)
 
-    def __str__(self):
+    def get_song(self):
         return self.title
+
+    class Meta:
+        ordering = ['-artist_id']
 
 
 class Lyrics(models.Model):
